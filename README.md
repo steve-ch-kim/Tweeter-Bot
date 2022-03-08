@@ -4,7 +4,7 @@ Tweeter-Bot is a Bot that is connected to the Twitter API and Peter-Portal API.
 Using simple discord-like commands such as !Courses, !Professors, !Grades, users are able to make a tweet on any account, tag this twitter bot, and receive a reply within seconds. 
 
 !Courses <First_Name> <Last_Name>:
-  This command returns a response that includes all the courses this Professor is teaching/has taught. 
+  This command returns a response that includes all the courses this Professor has taught. 
 <img width="446" alt="Screen Shot 2022-03-08 at 01 42 52" src="https://user-images.githubusercontent.com/25373931/157211993-d18f5485-b244-446c-ae31-8da068a3f064.png">
   
 !Professors <Department> <Course_Number>:
