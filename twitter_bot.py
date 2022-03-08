@@ -2,11 +2,11 @@ from peter_portal import get_courses, get_grades, get_professors
 import tweepy
 import time
 
-consumer_key = 'xxxx'
-consumer_secret  = 'xxxx'
-access_token = 'xxxxxxxx'
-access_token_secret = 'xxxx'
-bearer_token = 'xxxxxxxx'
+consumer_key = 'HeRMmVfUNmrZ4S15w7Z1KKibF'
+consumer_secret  = '3bNn8BlOeYR0X0P4cLhU8bsxpyjwnMUJA1SQTyweYuDvn6sZXb'
+access_token = '1500927721542598663-CwwnRBhaWXL5VxO4crXemDVo4ZTM84'
+access_token_secret = 'jISOM8s06Mpd2KEWZpDxr1VrCNmqBQ5btGVTu8HdUkEKP'
+bearer_token = 'AAAAAAAAAAAAAAAAAAAAAHjqZwEAAAAA62lgKU1JAcfanxGaP6flHTsTkVA%3DTiLMp0ywpGO0lw2zQZrrryBukPrubI78nzdlOsYrqCDOpwhT2T'
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret, access_token, access_token_secret)
 api = tweepy.API(auth)
@@ -30,6 +30,9 @@ user_id = client.get_user(username = 'tweeter_b0t', user_auth=True).data.id
 # store all IDs sceen
 # DEV: USE 1500964252013580289 for testing
 seen_ids = [1500964252013580289]
+
+# current quarter/year
+current_quarter = '2022 Spring'
 
 def create_tweet():
    # get all mentions of the user since the last since ID
@@ -56,7 +59,7 @@ def create_tweet():
 
             try:
                # reply to the tweet
-               status = 'Professor(s) teaching this course in 2022 Spring:\n\n' + professors
+               status = 'Professor(s) teaching this course in ' + current_quarter + ':\n\n' + professors
 
                api.update_status(status = status, in_reply_to_status_id = mention.id, auto_populate_reply_metadata=True)
                print("Tweet Creation Successful!")
@@ -70,7 +73,7 @@ def create_tweet():
             
             try:
                # reply to the tweet
-               status = 'Course(s) taught by Professor:\n\n' + courses
+               status = 'Course(s) being taught by Professor in ' + current_quarter + ':\n\n' + courses
 
                # handle the cacse if the tweet exceeds max length
                if len(status) > 280:
