@@ -5,7 +5,7 @@ Using simple discord-like commands such as !Courses, !Professors, !Grades, users
 
 !Courses <First_Name> <Last_Name>:
   This command returns a response that includes all the courses this Professor has taught. 
-<img width="602" alt="Screen Shot 2022-03-08 at 13 40 00" src="https://user-images.githubusercontent.com/25373931/157329942-d972a696-73c8-4d2d-b214-2d69e0154daf.png">
+<img width="608" alt="Screen Shot 2022-03-08 at 13 46 58" src="https://user-images.githubusercontent.com/25373931/157331058-12665a91-7b0a-4aaa-845c-a95162976654.png">
 
   
 !Professors <Department> <Course_Number>:
