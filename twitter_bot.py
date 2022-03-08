@@ -1,4 +1,3 @@
-from venv import create
 from peter_portal import get_courses, get_grades, get_professors
 import tweepy
 import time
