@@ -33,13 +33,33 @@ def get_courses(first_name, last_name):
     response = requests.get("https://api.peterportal.org/rest/v0/instructors/all")
     json_data = json.loads(response.text)
 
+    current_courses = []
+
     # if the professor matches 
     for professor in json_data:
         if first_name.lower() in professor['name'].lower() and last_name.lower() in professor['name'].lower():
-            # create a list of all the courses that the professor teaches/have taught
-            courses = [course for course in professor['course_history']]
-    
-    return courses
+            for course in professor['course_history']:
+                course_list = course.split(' ')
+                department = course_list[0]
+                course_number = course_list[-1]
+
+                # update the department to insert correctly into URL
+                if 'i&c' in course_list[0].lower():
+                    department = 'I&CSCI'
+                
+                # make the response and fetch the data in JSON
+                response = requests.get("https://api.peterportal.org/rest/v0/courses/" + department + str(course_number))
+                json_data = json.loads(response.text)
+                
+                try:
+                    # create a list of all the courses that the professor teaches/have taught
+                    if "2022 Spring" in json_data['terms']:
+                        current_courses.append(course)
+                # handle the error in case the case is either no longer offered or unable to parse through URL
+                except:
+                    pass
+            
+    return current_courses
 
 # !Grades Richard Pattis ICS 33 -> (year, quarter, {A: #, B: #, C: #, D: #, F: #})
 def get_grades(professor_name, department, course_number):
