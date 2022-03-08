@@ -5,8 +5,8 @@ Using simple discord-like commands such as !Courses, !Professors, !Grades, users
 
 !Courses <First_Name> <Last_Name>:
   This command returns a response that includes all the courses this Professor has taught. 
-<img width="446" alt="Screen Shot 2022-03-08 at 01 42 52" src="https://user-images.githubusercontent.com/25373931/157211993-d18f5485-b244-446c-ae31-8da068a3f064.png">
-  
+<img width="602" alt="Screen Shot 2022-03-08 at 13 40 00" src="https://user-images.githubusercontent.com/25373931/157329942-d972a696-73c8-4d2d-b214-2d69e0154daf.png">
+
   
 !Professors <Department> <Course_Number>:
   This command returns a response that includes all the Professors who are currently teaching the specified course. Current Term: 2022 Spring (as of March 2022)
