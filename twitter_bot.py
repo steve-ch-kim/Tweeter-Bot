@@ -2,11 +2,11 @@ from peter_portal import get_courses, get_grades, get_professors
 import tweepy
 import time
 
-consumer_key = 'HeRMmVfUNmrZ4S15w7Z1KKibF'
-consumer_secret  = '3bNn8BlOeYR0X0P4cLhU8bsxpyjwnMUJA1SQTyweYuDvn6sZXb'
-access_token = '1500927721542598663-CwwnRBhaWXL5VxO4crXemDVo4ZTM84'
-access_token_secret = 'jISOM8s06Mpd2KEWZpDxr1VrCNmqBQ5btGVTu8HdUkEKP'
-bearer_token = 'AAAAAAAAAAAAAAAAAAAAAHjqZwEAAAAA62lgKU1JAcfanxGaP6flHTsTkVA%3DTiLMp0ywpGO0lw2zQZrrryBukPrubI78nzdlOsYrqCDOpwhT2T'
+consumer_key = 'xxxx'
+consumer_secret  = 'xxxx'
+access_token = 'xxxxxxxx'
+access_token_secret = 'xxxx'
+bearer_token = 'xxxxxxxx'
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret, access_token, access_token_secret)
 api = tweepy.API(auth)
